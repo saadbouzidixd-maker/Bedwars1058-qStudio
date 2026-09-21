@@ -1,0 +1,30 @@
+<settings>
+    <servers>
+        <server>
+            <id>gitlab-maven</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Job-Token</name>
+                        <value>${env.CI_JOB_TOKEN}</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+        <server>
+            <id>andrei1058-repo</id>
+            <username>__token__</username>
+            <password>${env.MVN_REPO_TOKEN}</password>
+        </server>
+    </servers>
+<!--    <mirrors>-->
+<!--        <mirror>-->
+<!--            <id>maven-default-http-blocker</id>-->
+<!--            <mirrorOf>dummy</mirrorOf>-->
+<!--            <name>Dummy mirror to override default blocking mirror that blocks http</name>-->
+<!--            <url>http://0.0.0.0/</url>-->
+<!--            <blocked>true</blocked>-->
+<!--        </mirror>-->
+<!--    </mirrors>-->
+
+</settings>
